@@ -5,26 +5,24 @@ File References:
   - SystemConfiguration.framework
 - Pods:
   - Reachability:
-    - Products:
-      - libPods-Reachability.a
-    - Source Files:
-      - Reachability.h
-      - Reachability.m
-    - Support Files:
+    - Reachability.h
+    - Reachability.m
+- Products:
+  - libPods.a
+  - libPods-Reachability.a
+- Target Files:
+  - Pods:
+    - Reachability:
+      - Pods-Reachability.xcconfig
       - Pods-Reachability-Private.xcconfig
       - Pods-Reachability-dummy.m
       - Pods-Reachability-prefix.pch
-      - Pods-Reachability.xcconfig
-- Products:
-  - libPods.a
-- Targets Support Files:
-  - Pods:
+    - Pods.xcconfig
     - Pods-acknowledgements.markdown
     - Pods-acknowledgements.plist
     - Pods-dummy.m
     - Pods-environment.h
     - Pods-resources.sh
-    - Pods.xcconfig
 - Podfile
 
 
