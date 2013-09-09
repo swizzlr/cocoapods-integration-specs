@@ -33,20 +33,22 @@ end
 
 desc "Updates the before folders"
 task :install_before_folders do
-  Pathname.pwd.children.each do |child|
-    if child.directory?
-      Dir.chdir(child + 'before') do |sub_child|
-        sub_child = Pathname.new(sub_child)
-        pods_dir = sub_child + 'Pods'
-        if (pods_dir).exist?
-          podfile_before = sub_child + 'Podfile-before'
-          podfile = sub_child + 'Podfile'
-          podfile_after = sub_child + 'Podfile-after-tmp'
+  Pathname.pwd.children.each do |test_dir|
+    if test_dir.directory?
+      test_dir = Pathname.new(test_dir)
+      before_dir = test_dir + 'before'
+      pods_dir = before_dir + 'Pods'
+
+      if (pods_dir).exist?
+        Dir.chdir(before_dir) do |dir|
+          podfile_before = 'Podfile-before'
+          podfile = 'Podfile'
+          podfile_after = 'Podfile-after-tmp'
           FileUtils.mv(podfile, podfile_after)
           FileUtils.mv(podfile_before, podfile)
 
           FileUtils.rm_rf(pods_dir.to_s)
-          puts "\nDIR: #{sub_child}"
+          puts "\nDIR: #{before_dir}"
           puts `#{pod_binary}`
 
           FileUtils.mv(podfile, podfile_before)
@@ -89,3 +91,7 @@ task :rebuild_after_folders do
   puts "Integration fixtures updated"
 end
 
+#-----------------------------------------------------------------------------#
+
+desc "Rebuilds everything with the given pod binary"
+task :rebuild_all => [:install_before_folders, :rebuild_after_folders]

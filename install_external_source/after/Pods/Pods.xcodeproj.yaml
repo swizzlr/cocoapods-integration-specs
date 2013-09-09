@@ -17,16 +17,16 @@ File References:
 - Target Files:
   - Pods:
     - PodTest:
-      - Pods-PodTest.xcconfig
-      - Pods-PodTest-Private.xcconfig
       - Pods-PodTest-dummy.m
       - Pods-PodTest-prefix.pch
-    - Pods.xcconfig
+      - Pods-PodTest.xcconfig
+      - Pods-PodTest-Private.xcconfig
+    - Pods-environment.h
+    - Pods-dummy.m
     - Pods-acknowledgements.markdown
     - Pods-acknowledgements.plist
-    - Pods-dummy.m
-    - Pods-environment.h
     - Pods-resources.sh
+    - Pods.xcconfig
 - Podfile
 
 

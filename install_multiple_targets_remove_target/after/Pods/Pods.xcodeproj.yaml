@@ -5,48 +5,45 @@ File References:
   - SystemConfiguration.framework
 - Pods:
   - JSONKit:
-    - Products:
-      - libPods-SampleApp_2-JSONKit.a
-    - Source Files:
-      - JSONKit.h
-      - JSONKit.m
-    - Support Files:
-      - Pods-SampleApp_2-JSONKit-Private.xcconfig
-      - Pods-SampleApp_2-JSONKit-dummy.m
-      - Pods-SampleApp_2-JSONKit-prefix.pch
-      - Pods-SampleApp_2-JSONKit.xcconfig
+    - JSONKit.h
+    - JSONKit.m
   - Reachability:
-    - Products:
-      - libPods-Reachability.a
-      - libPods-SampleApp_2-Reachability.a
-    - Source Files:
-      - Reachability.h
-      - Reachability.m
-    - Support Files:
-      - Pods-Reachability-Private.xcconfig
+    - Reachability.h
+    - Reachability.m
+- Products:
+  - libPods.a
+  - libPods-Reachability.a
+  - libPods-SampleApp_2.a
+  - libPods-SampleApp_2-JSONKit.a
+  - libPods-SampleApp_2-Reachability.a
+- Target Files:
+  - Pods:
+    - Reachability:
       - Pods-Reachability-dummy.m
       - Pods-Reachability-prefix.pch
       - Pods-Reachability.xcconfig
-      - Pods-SampleApp_2-Reachability-Private.xcconfig
-      - Pods-SampleApp_2-Reachability-dummy.m
-      - Pods-SampleApp_2-Reachability-prefix.pch
-      - Pods-SampleApp_2-Reachability.xcconfig
-- Products:
-  - libPods-SampleApp_2.a
-  - libPods.a
-- Targets Support Files:
-  - Pods:
+      - Pods-Reachability-Private.xcconfig
+    - Pods-environment.h
+    - Pods-dummy.m
     - Pods-acknowledgements.markdown
     - Pods-acknowledgements.plist
-    - Pods-dummy.m
-    - Pods-environment.h
     - Pods-resources.sh
     - Pods.xcconfig
   - Pods-SampleApp_2:
+    - JSONKit:
+      - Pods-SampleApp_2-JSONKit-dummy.m
+      - Pods-SampleApp_2-JSONKit-prefix.pch
+      - Pods-SampleApp_2-JSONKit.xcconfig
+      - Pods-SampleApp_2-JSONKit-Private.xcconfig
+    - Reachability:
+      - Pods-SampleApp_2-Reachability-dummy.m
+      - Pods-SampleApp_2-Reachability-prefix.pch
+      - Pods-SampleApp_2-Reachability.xcconfig
+      - Pods-SampleApp_2-Reachability-Private.xcconfig
+    - Pods-SampleApp_2-environment.h
+    - Pods-SampleApp_2-dummy.m
     - Pods-SampleApp_2-acknowledgements.markdown
     - Pods-SampleApp_2-acknowledgements.plist
-    - Pods-SampleApp_2-dummy.m
-    - Pods-SampleApp_2-environment.h
     - Pods-SampleApp_2-resources.sh
     - Pods-SampleApp_2.xcconfig
 - Podfile

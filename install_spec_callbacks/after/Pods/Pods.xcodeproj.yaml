@@ -6,8 +6,8 @@ File References:
 - Pods:
   - Reachability:
     - Reachability.h
-    - Reachability.m
     - TestClass.h
+    - Reachability.m
     - TestClass.m
 - Products:
   - libPods.a
@@ -15,16 +15,16 @@ File References:
 - Target Files:
   - Pods:
     - Reachability:
-      - Pods-Reachability.xcconfig
-      - Pods-Reachability-Private.xcconfig
       - Pods-Reachability-dummy.m
       - Pods-Reachability-prefix.pch
-    - Pods.xcconfig
+      - Pods-Reachability.xcconfig
+      - Pods-Reachability-Private.xcconfig
+    - Pods-environment.h
+    - Pods-dummy.m
     - Pods-acknowledgements.markdown
     - Pods-acknowledgements.plist
-    - Pods-dummy.m
-    - Pods-environment.h
     - Pods-resources.sh
+    - Pods.xcconfig
 - Podfile
 
 

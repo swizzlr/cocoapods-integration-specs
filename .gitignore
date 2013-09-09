@@ -1,1 +1,5 @@
 tmp
+xcuserdata
+project.xcworkspace
+DerivedData
+/concatenated.*
