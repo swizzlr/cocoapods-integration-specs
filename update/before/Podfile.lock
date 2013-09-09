@@ -1,10 +1,10 @@
 PODS:
-  - Reachability (3.1.0)
+  - Reachability (3.0.0)
 
 DEPENDENCIES:
-  - Reachability (<= 3.1.0)
+  - Reachability (= 3.0.0)
 
 SPEC CHECKSUMS:
-  Reachability: ba94ecd4eaa037be3d0588b38956672588530c5b
+  Reachability: 500bd76bf6cd8ff2c6fb715fc5f44ef6e4c024f2
 
 COCOAPODS: 0.24.0
