@@ -71,8 +71,11 @@ end
 #-----------------------------------------------------------------------------#
 
 desc "Rebuilds the after folders from scratch with the results produced by running the tests"
-task :rebuild_after_folders => :run do
-  puts 'Storing fixtures'
+task :rebuild_after_folders do
+  puts 'Running tests'
+  `bacon test_runner.rb`
+
+  puts 'Storing after folders'
   FileList['tmp/*'].each do |source|
     destination = "#{source.gsub('tmp/','')}/after"
     if File.exists?(destination)
