@@ -55,6 +55,14 @@ describe "Integration" do
       check "install --no-repo-update", "install_multiple_targets"
     end
 
+    describe "Adds an aggregate target to an existing installation" do
+      check "install --no-repo-update", "install_multiple_targets_add_target/"
+    end
+
+    describe "Removes an aggregate target from an existing installation" do
+      check "install --no-repo-update", "install_multiple_targets_remove_target/"
+    end
+
     describe "Installs a Pod with different subspecs activated across different targets" do
       check "install --no-repo-update", "install_subspecs"
     end
