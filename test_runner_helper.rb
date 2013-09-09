@@ -169,13 +169,6 @@ module IntegrationRunnerHelpers
         end
       end
       desc << diffy_diff
-
-      desc << ("--- XCODEPROJ DIFF " << "-" * 60)
-      diff_options = {:key_1 => "$produced", :key_2 => "$expected"}
-      diff = Xcodeproj::Differ.diff(produced_yaml, expected_yaml, diff_options).to_yaml
-      diff.gsub!("$produced", "produced".green)
-      diff.gsub!("$expected", "expected".red)
-      desc << diff
       desc << ("--- END " << "-" * 70)
     end
 
