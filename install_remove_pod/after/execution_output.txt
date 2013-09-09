@@ -2,6 +2,7 @@ CP_AGGRESSIVE_CACHE=TRUE $ pod install --no-repo-update --verbose --no-color 2>&
 Analyzing dependencies
 
 Finding Podfile changes
+  R JSONKit
   - Reachability
 
 Resolving dependencies of `Podfile`
@@ -9,7 +10,10 @@ Resolving dependencies for target `Pods' (iOS 6.0)
   - Reachability (= 3.1.0)
 
 Comparing resolved specification to the sandbox manifest
+  R JSONKit
   - Reachability
+
+-> Removing JSONKit
 
 Downloading dependencies
 

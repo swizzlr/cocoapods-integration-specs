@@ -61,10 +61,10 @@ end
 
 desc "Remove files not used for the comparison from the after folders"
 task :clean do
-  files_to_delete = FileList['*/after/{Podfile,*.podspec,**/*.xcodeproj,PodTest-hg-source}']
+  files_to_delete = FileList['*/after/{Podfile,Podfile-before,*.podspec,**/*.xcodeproj,PodTest-hg-source}']
   files_to_delete.exclude('/init_single_platform/**/*.*')
   files_to_delete.each do |file_to_delete|
-    sh command
+    sh "rm -rf #{file_to_delete}"
   end
 end
 
