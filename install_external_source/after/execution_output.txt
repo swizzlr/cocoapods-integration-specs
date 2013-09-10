@@ -4,8 +4,7 @@ Analyzing dependencies
 Fetching external sources
 -> Pre-downloading: `PodTest` from `PodTest-hg-source`
  > Mercurial download
-   $ /usr/local/bin/hg clone "PodTest-hg-source"
-   "ROOT/tmp/install_external_source/Pods/PodTest"
+   $ /usr/local/bin/hg clone "PodTest-hg-source" "ROOT/tmp/install_external_source/Pods/PodTest"
    updating to branch default
    5 files updated, 0 files merged, 0 files removed, 0 files unresolved
 
@@ -23,30 +22,23 @@ Downloading dependencies
 -> Installing PodTest (1.0)
   - Running pre install hooks
 
+Linking headers
+
 Generating Pods project
-  - Creating Pods project
-  - Adding source files to Pods project
-  - Adding frameworks to Pods project
-  - Adding frameworks to Pods project
-  - Adding resources to Pods project
-  - Linking headers
-  - Installing libraries
-    - Installing target `Pods-PodTest` iOS 4.3
-      - Adding Build files
-      - Adding resource bundles to Pods project
-      - Generating public xcconfig file at `Pods/Pods-PodTest.xcconfig`
-      - Generating private xcconfig file at `Pods/Pods-PodTest-Private.xcconfig`
-      - Generating prefix header at `Pods/Pods-PodTest-prefix.pch`
-      - Generating dummy source file at `Pods/Pods-PodTest-dummy.m`
-    - Installing target `Pods` iOS 4.3
-      - Generating xcconfig file at `Pods/Pods.xcconfig`
-      - Generating target environment header at `Pods/Pods-environment.h`
-      - Generating copy resources script at `Pods/Pods-resources.sh`
-      - Generating acknowledgements at `Pods/Pods-acknowledgements.plist`
-      - Generating acknowledgements at `Pods/Pods-acknowledgements.markdown`
-      - Generating dummy source file at `Pods/Pods-dummy.m`
+  - Initializing new project
+  - Installing `PodTest`
+    - Installing file references
+    - Installing target `Pods-PodTest iOS 4.3`
+  - Installing `Pods iOS 4.3`
+    - Installing target `Pods iOS 4.3`
+  - Generating support files for target `Pods-PodTest iOS 4.3`
+  - Generating support files for target `Pods iOS 4.3`
+  - Populating aggregate targets
+  - Setting-up target dependencies
   - Running post install hooks
-  - Writing Xcode project file to `Pods/Pods.xcodeproj`
+  - Writing Pods project
+
+Writing Lockfiles
   - Writing Lockfile in `Podfile.lock`
   - Writing Manifest in `Pods/Manifest.lock`
 
