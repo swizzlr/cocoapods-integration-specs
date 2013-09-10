@@ -25,8 +25,7 @@ Downloading dependencies
    $ /usr/bin/git rev-list --max-count=1 0aff3deb5e1bb2bbc88a83fd71c8ad5550185cce
    0aff3deb5e1bb2bbc88a83fd71c8ad5550185cce
  > Cloning to Pods folder
-     $ /usr/bin/git clone "CACHES_DIR/GitHub/de3e1c97c03ac13b29e7533beea2d2131589900f"
-     "ROOT/tmp/install_add_pod/Pods/JSONKit"
+     $ /usr/bin/git clone "CACHES_DIR/GitHub/de3e1c97c03ac13b29e7533beea2d2131589900f" "ROOT/tmp/install_add_pod/Pods/JSONKit"
      Cloning into 'ROOT/tmp/install_add_pod/Pods/JSONKit'...
      done.
    $ /usr/bin/git checkout -b activated-pod-commit 0aff3deb5e1bb2bbc88a83fd71c8ad5550185cce 2>&1
@@ -70,3 +69,10 @@ Generating Pods project
   - Writing Manifest in `Pods/Manifest.lock`
 
 Integrating client project
+
+[!] xcproj failed to touch the project. Check whether you installation of xcproj is functional.
+
+xcproj --project "ROOT/tmp/install_add_pod/Pods/Pods.xcodeproj" touch
+The DevToolsCore framework failed to load: Error Domain=NSCocoaErrorDomain Code=3586 "The bundle “Xcode Core Framework” couldn’t be loaded because it isn’t compatible with the current application." (dlopen_preflight(/Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/Frameworks/DevToolsCore.framework/DevToolsCore): no suitable image found.  Did find:
+	/Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/Frameworks/DevToolsCore.framework/DevToolsCore: GC capability mismatch) UserInfo=0x400323e80 {NSLocalizedFailureReason=The bundle isn’t compatible with this application., NSLocalizedRecoverySuggestion=Try installing a newer version of the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/Frameworks/DevToolsCore.framework/DevToolsCore, NSDebugDescription=dlopen_preflight(/Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/Frameworks/DevToolsCore.framework/DevToolsCore): no suitable image found.  Did find:
+	/Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/Frameworks/DevToolsCore.framework/DevToolsCore: GC capability mismatch, NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/Frameworks/DevToolsCore.framework, NSLocalizedDescription=The bundle “Xcode Core Framework” couldn’t be loaded because it isn’t compatible with the current application.}
